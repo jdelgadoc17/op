@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Personajes"
+        android:id="@+id/fragmentoLista"
+        android:icon="@drawable/luffy_hat"
+
+
+        />
+    <item android:title="Favoritos"
+        android:id="@+id/fragmentoFavoritos"
+        android:icon="@drawable/img_star"
+
+        />
+    <item android:title="Random"
+        android:id="@+id/fragmentoRandom"
+        android:icon="@drawable/img_ace"
+
+        />
+</menu>

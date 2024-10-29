@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ONEPIECE</string>
+    <string name="confirmar_eliminacion">Confirm Deletion</string>
+    <string name="confirmar_eliminacion2">Are you sure you want to remove </string>
+    <string name="eliminar">Delete</string>
+    <string name="cancelar">Cancel</string>
+    <string name="de_favs"> from your favorites?</string>
+
+    <string name="recompensa">Reward: </string>
+    <string name="sin_recompensa">No reward</string>
+    <string name="millones"> million berries</string>
+    <string name="piratas">Pirates</string>
+    <string name="marines">Marines</string>
+    <string name="revolucionarios">Revolutionaries</string>
+    <string name="no_personajes">No characters available</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/grafo"
+    app:startDestination="@id/fragmentoLista">
+
+    <fragment
+        android:id="@+id/fragmentoLista"
+        android:name="com.example.op.FragmentoLista"
+        android:label="FragmentoLista" />
+    <fragment
+        android:id="@+id/fragmentoFavoritos"
+        android:name="com.example.op.FragmentoFavoritos"
+        android:label="fragment_fragmento_favoritos"
+        tools:layout="@layout/fragment_fragmento_favoritos" />
+    <fragment
+        android:id="@+id/fragmentoRandom"
+        android:name="com.example.op.FragmentoRandom"
+        android:label="FragmentoRandom" />
+    <fragment
+        android:id="@+id/fragmentoDetalle"
+        android:name="com.example.op.FragmentoDetalle"
+        android:label="FragmentoDetalle" />
+</navigation>

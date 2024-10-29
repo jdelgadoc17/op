@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ONEPIECE</string>
+    <string name="confirmar_eliminacion">Confirmar Eliminación</string>
+    <string name="confirmar_eliminacion2">¿Estás seguro de que deseas eliminar a </string>
+    <string name="eliminar">Eliminar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="de_favs"> de tus favoritos?</string>
+
+    <string name="recompensa">Recompensa: </string>
+    <string name="sin_recompensa">Sin recompensa</string>
+    <string name="millones"> millones de berries</string>
+    <string name="piratas">Piratas</string>
+    <string name="marines">Marines</string>
+    <string name="revolucionarios">Revolucionarios</string>
+    <string name="no_personajes">No hay personajes disponibles</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/grafo_detalle"
+    app:startDestination="@id/fragmentoDetalle">
+
+    <fragment
+        android:id="@+id/fragmentoDetalle"
+        android:name="com.example.op.FragmentoDetalle"
+        android:label="FragmentoDetalle" />
+</navigation>
