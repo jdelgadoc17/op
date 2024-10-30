@@ -53,9 +53,9 @@ public class FragmentoLista extends Fragment {
                     case 1:
                         return new FragmentoMarines();
                     case 2:
-                        return new FragmentoPiratas();
-                    default:
                         return new FragmentoRevolucionarios();
+                    default:
+                        return new FragmentoPiratas();
                 }
             }
 
