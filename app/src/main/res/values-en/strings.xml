@@ -14,4 +14,7 @@
     <string name="marines">Marines</string>
     <string name="revolucionarios">Revolutionaries</string>
     <string name="no_personajes">No characters available</string>
+    <string name="personajes">Characters</string>
+    <string name="favoritos">Favorites</string>
+    <string name="random">Random</string>
 </resources>

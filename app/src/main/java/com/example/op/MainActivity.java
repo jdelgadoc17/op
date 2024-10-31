@@ -87,12 +87,15 @@ public class MainActivity extends AppCompatActivity {
                     if (isListaSection) {
                         if (navController.getCurrentDestination() != null
                                 && navController.getCurrentDestination().getId() == R.id.fragmentoLista) {
+                            toolbar.setTitle(getString(R.string.personajes));
                             return true;
                         }
                         navController.navigate(R.id.fragmentoLista);
                     } else if (item.getItemId() == R.id.fragmentoFavoritos) {
+                        toolbar.setTitle(getString(R.string.favoritos));
                         navController.navigate(R.id.fragmentoFavoritos);
                     } else if (item.getItemId() == R.id.fragmentoRandom) {
+                        toolbar.setTitle(getString(R.string.random));
                         navController.navigate(R.id.fragmentoRandom);
                     }
 
