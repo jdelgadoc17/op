@@ -10,6 +10,7 @@
     <item android:title="Favoritos"
         android:id="@+id/fragmentoFavoritos"
         android:icon="@drawable/img_star"
+        
 
         />
     <item android:title="Random"

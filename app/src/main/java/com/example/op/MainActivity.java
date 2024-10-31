@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
             // Configuración de iconos y tamaño del menú
             binding.menuInferior.setItemIconTintList(null);
-            binding.menuInferior.setItemIconSize(150);
+            binding.menuInferior.setItemIconSize(100);
 
             // Listener para el menú inferior
             binding.menuInferior.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/imgInfo"
-        android:layout_width="314dp"
-        android:layout_height="282dp"
+        android:layout_width="266dp"
+        android:layout_height="145dp"
         android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,12 +39,11 @@
 
     <ImageButton
         android:id="@+id/buttonRandom"
-        android:layout_width="127dp"
+        android:layout_width="107dp"
         android:layout_height="69dp"
-        android:layout_marginTop="68dp"
-        android:src="@android:drawable/ic_popup_sync"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/random"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgInfo" />
 

@@ -95,6 +95,12 @@ public class FragmentoDetalle extends Fragment {
             binding.rolInfo.setText(personaje.getRol());
             binding.descripcionInfo.setText(personaje.getDescripcion());
             binding.imgInfo.setImageResource(personaje.getImage());
+            binding.recompensaInfo.setVisibility(View.GONE);
+            binding.rolInfo.setVisibility(View.GONE);
+            binding.descripcionInfo.setVisibility(View.GONE);
+
+
+
         }
     }
 
