@@ -39,7 +39,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:defaultNavHost="true"
-            app:navGraph="@navigation/grafo" />
+            app:navGraph="@navigation/grafo"
+            tools:layout="@layout/fragment_fragmento_lista" />
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/vistaDetalle"
@@ -49,10 +50,11 @@
             android:layout_weight="1"
             android:visibility="gone"
             app:navGraph="@navigation/grafo_detalle"
-            />
+            tools:layout="@layout/fragment_fragmento_detalle" />
+        <!--VISIBILIDAD A GONE-->
     </LinearLayout>
 
-    <!-- Bottom Navigation -->
+    <!-- Bottom Navigationnnn -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menuInferior"
         android:layout_width="0dp"

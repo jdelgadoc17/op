@@ -3,6 +3,7 @@ package com.example.op;
 import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -50,10 +51,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        // Configuración inicial de la visibilidad de los fragmentos
+        ajustarVisibilidadFragmentos();
 
         // Inicializa PersonajeViewModel
         personajeViewModel = new ViewModelProvider(this).get(PersonajeViewModel.class);
@@ -79,7 +82,9 @@ public class MainActivity extends AppCompatActivity {
             binding.menuInferior.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    if (item.getItemId() == R.id.fragmentoLista) {
+                    boolean isListaSection = item.getItemId() == R.id.fragmentoLista;
+
+                    if (isListaSection) {
                         if (navController.getCurrentDestination() != null
                                 && navController.getCurrentDestination().getId() == R.id.fragmentoLista) {
                             return true;
@@ -90,6 +95,10 @@ public class MainActivity extends AppCompatActivity {
                     } else if (item.getItemId() == R.id.fragmentoRandom) {
                         navController.navigate(R.id.fragmentoRandom);
                     }
+
+                    // Controlar visibilidad de vistaDetalle
+                    binding.vistaDetalle.setVisibility(isListaSection && getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE ? View.VISIBLE : View.GONE);
+
                     return true;
                 }
             });
@@ -97,62 +106,38 @@ public class MainActivity extends AppCompatActivity {
 
         // Observador del personaje seleccionado
         personajeViewModel.getPersonajeSeleccionado().observe(this, personaje -> {
-            // Si estamos en modo horizontal, asegura que vistaDetalle muestre el personaje
             if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
                 actualizarVistaDetalle(personaje);
             }
         });
-
-        // Configura visibilidad inicial de fragmentos según la orientación
-        ajustarVisibilidadFragmentos(getResources().getConfiguration().orientation);
     }
 
+    // METODO para ajustar la visibilidad de los fragmentos según orientación
+    private void ajustarVisibilidadFragmentos() {
+        boolean isLandscape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
+        binding.vistaLista.setVisibility(View.VISIBLE);
+        if(isLandscape){
+            binding.vistaDetalle.setVisibility(View.VISIBLE);
+        }else{
+            binding.vistaDetalle.setVisibility(View.GONE);
+        }
+    }
+
+    // Detectar cambio de orientación y ajustar visibilidad AUTOMATICO (se ha modificado el Android Manifest)
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        ajustarVisibilidadFragmentos(newConfig.orientation);
-
-        // Si cambiamos a modo horizontal, actualiza vistaDetalle con el personaje seleccionado
-        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            Personaje personajeSeleccionado = personajeViewModel.getPersonajeSeleccionado().getValue();
-            if (personajeSeleccionado != null) {
-                actualizarVistaDetalle(personajeSeleccionado);
-            }
-        }
+        ajustarVisibilidadFragmentos();
     }
 
-    private void ajustarVisibilidadFragmentos(int orientation) {
-        Fragment vistaLista = getSupportFragmentManager().findFragmentById(R.id.vistaLista);
-        Fragment vistaDetalle = getSupportFragmentManager().findFragmentById(R.id.vistaDetalle);
-
-        if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            // En modo horizontal, ambos fragmentos son visibles
-            if (vistaLista != null && vistaLista.getView() != null) {
-                vistaLista.getView().setVisibility(View.VISIBLE);
-            }
-            if (vistaDetalle != null && vistaDetalle.getView() != null) {
-                vistaDetalle.getView().setVisibility(View.VISIBLE);
-            }
-        } else {
-            // En modo vertical, solo vistaLista es visible al inicio, oculta vistaDetalle
-            if (vistaLista != null && vistaLista.getView() != null) {
-                vistaLista.getView().setVisibility(View.VISIBLE);
-            }
-            if (vistaDetalle != null && vistaDetalle.getView() != null) {
-                vistaDetalle.getView().setVisibility(View.GONE);
-            }
-        }
-    }
-
-    // Método para actualizar la vista de detalle
+    // Método para actualizar la vista de detalle con el personaje seleccionado
     private void actualizarVistaDetalle(Personaje personaje) {
-        // Verificamos si `vistaDetalle` es el NavHostFragment y obtenemos su fragmento activo
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.vistaDetalle);
         if (navHostFragment != null) {
             Fragment fragmentoActivo = navHostFragment.getChildFragmentManager().getPrimaryNavigationFragment();
             if (fragmentoActivo instanceof FragmentoDetalle && personaje != null) {
-                // Actualizamos el fragmento con el personaje seleccionado
                 ((FragmentoDetalle) fragmentoActivo).actualizarDetalle(personaje);
+                //Comprueba si el fragment activo es el fragmento Detalle y si es así, el manda la info para que se muestre
             }
         }
     }
