@@ -106,21 +106,24 @@ public class MainActivity extends AppCompatActivity {
 
         // Observador del personaje seleccionado
         personajeViewModel.getPersonajeSeleccionado().observe(this, personaje -> {
-            // Solo actualiza en landscape y cuando estamos en `fragmentoLista`
             if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-                actualizarVistaDetalle(personaje); // Método para actualizar detalles
+                actualizarVistaDetalle(personaje);
             }
         });
     }
 
-    // Método para ajustar la visibilidad de los fragmentos según orientación
+    // METODO para ajustar la visibilidad de los fragmentos según orientación
     private void ajustarVisibilidadFragmentos() {
         boolean isLandscape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
         binding.vistaLista.setVisibility(View.VISIBLE);
-        binding.vistaDetalle.setVisibility(isLandscape ? View.VISIBLE : View.GONE);
+        if(isLandscape){
+            binding.vistaDetalle.setVisibility(View.VISIBLE);
+        }else{
+            binding.vistaDetalle.setVisibility(View.GONE);
+        }
     }
 
-    // Detectar cambio de orientación y ajustar visibilidad
+    // Detectar cambio de orientación y ajustar visibilidad AUTOMATICO (se ha modificado el Android Manifest)
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
@@ -134,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
             Fragment fragmentoActivo = navHostFragment.getChildFragmentManager().getPrimaryNavigationFragment();
             if (fragmentoActivo instanceof FragmentoDetalle && personaje != null) {
                 ((FragmentoDetalle) fragmentoActivo).actualizarDetalle(personaje);
+                //Comprueba si el fragment activo es el fragmento Detalle y si es así, el manda la info para que se muestre
             }
         }
     }
