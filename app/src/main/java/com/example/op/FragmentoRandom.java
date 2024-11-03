@@ -28,13 +28,12 @@ public class FragmentoRandom extends Fragment {
     private Random random;
 
     public FragmentoRandom() {
-        // Constructor vacío requerido
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        random = new Random();  // Inicializar Random solo una vez
+        random = new Random();
     }
 
     @Override
@@ -48,7 +47,6 @@ public class FragmentoRandom extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Configuración de imagen predeterminada
         binding.imgInfo.setImageResource(R.drawable.luffy_hat);
 
         binding.buttonRandom.setOnClickListener(v -> mostrarPersonajeRandom());
@@ -60,24 +58,20 @@ public class FragmentoRandom extends Fragment {
     }
 
     public void mostrarPersonajeRandom() {
-        // Obtener las listas de personajes del repositorio
         listaPiratas = RepositorioPersonajes.getLista_piratas();
         listaMarines = RepositorioPersonajes.getLista_marines();
         listaRevolucionarios = RepositorioPersonajes.getLista_revolucionarios();
 
-        // Combinar listas en una sola
         List<Personaje> listaCombinada = new ArrayList<>();
         listaCombinada.addAll(listaPiratas);
         listaCombinada.addAll(listaMarines);
         listaCombinada.addAll(listaRevolucionarios);
 
-        // Verificar si la lista está vacía
         if (listaCombinada.isEmpty()) {
             Toast.makeText(getContext(), getString(R.string.no_personajes), Toast.LENGTH_SHORT).show();
             return;
         }
 
-        // Seleccionar un personaje aleatorio y actualizar la interfaz
         Personaje personajeRandom = listaCombinada.get(random.nextInt(listaCombinada.size()));
         binding.imgInfo.setImageResource(personajeRandom.getImage());
         binding.nombreTextView.setText(personajeRandom.getNombre());

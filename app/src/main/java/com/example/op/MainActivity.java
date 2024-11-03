@@ -126,14 +126,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // Detectar cambio de orientación y ajustar visibilidad AUTOMATICO (se ha modificado el Android Manifest)
+    // Este método sirve para detectar cambios de orientación y ajustamos visibilidad AUTOMATICO (se ha modificado el Android Manifest)
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         ajustarVisibilidadFragmentos();
     }
 
-    // Método para actualizar la vista de detalle con el personaje seleccionado
+    // Este es un metodo para actualizar la vista de detalle con el personaje seleccionado
     private void actualizarVistaDetalle(Personaje personaje) {
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.vistaDetalle);
         if (navHostFragment != null) {

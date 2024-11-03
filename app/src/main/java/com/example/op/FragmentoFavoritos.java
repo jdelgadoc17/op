@@ -27,7 +27,6 @@ public class FragmentoFavoritos extends Fragment {
     private AdapterFavoritos adapterFavoritos;
 
     public FragmentoFavoritos() {
-        // Required empty public constructor
     }
 
     @Override
@@ -52,7 +51,7 @@ public class FragmentoFavoritos extends Fragment {
             adapterFavoritos.notifyDataSetChanged();
         });
 
-        //ITEMTOUCH
+        //ITEM TOUCH
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {

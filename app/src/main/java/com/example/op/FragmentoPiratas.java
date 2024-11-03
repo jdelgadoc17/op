@@ -21,7 +21,6 @@ public class FragmentoPiratas extends Fragment {
     PersonajeViewModel personajeViewModel;
     FragmentFragmentoPiratasBinding binding;
     public FragmentoPiratas() {
-        // Required empty public constructor
     }
 
 

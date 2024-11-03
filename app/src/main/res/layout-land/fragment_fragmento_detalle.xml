@@ -7,38 +7,39 @@
 
     <TextView
         android:id="@+id/descripcionInfo"
-        android:layout_width="156dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="8dp"
-        android:textSize="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.97"
+        android:layout_width="175dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="48dp"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recompensaInfo" />
+        app:layout_constraintTop_toBottomOf="@+id/nombreTextView"
+        app:layout_constraintVertical_bias="0.09" />
 
     <TextView
         android:id="@+id/recompensaInfo"
-        android:layout_width="187dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="4dp"
-        android:textSize="10dp"
+        android:layout_width="106dp"
+        android:layout_height="88dp"
 
 
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rolInfo" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.355" />
 
     <ImageView
         android:id="@+id/imgInfo"
-        android:layout_width="191dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="208dp"
+        android:layout_height="131dp"
+        android:layout_marginTop="8dp"
         android:src="@drawable/luffy_hat"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreTextView"
+        app:layout_constraintEnd_toStartOf="@+id/rolInfo"
+        app:layout_constraintHorizontal_bias="0.368"
+        app:layout_constraintStart_toEndOf="@+id/nombreTextView"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -48,18 +49,18 @@
         android:layout_marginTop="8dp"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.598"
+        app:layout_constraintHorizontal_bias="0.097"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/rolInfo"
-        android:layout_width="142dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="8dp"
-        android:textSize="10dp"
+        android:layout_width="98dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/nombreTextView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -73,6 +74,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.871"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

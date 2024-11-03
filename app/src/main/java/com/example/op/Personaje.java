@@ -1,6 +1,6 @@
 package com.example.op;
 
-public class Personaje {
+public class Personaje { //ESTA ES NUESTRA CLASE PERSONAJE
     private String nombre;
     private String rol;
     private int recompensa;

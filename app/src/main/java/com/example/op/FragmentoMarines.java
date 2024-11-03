@@ -22,7 +22,6 @@ public class FragmentoMarines extends Fragment {
     FragmentFragmentoMarinesBinding binding;
     PersonajeViewModel personajeViewModel;
     public FragmentoMarines() {
-        // Required empty public constructor
     }
 
 
@@ -36,7 +35,6 @@ public class FragmentoMarines extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         binding = FragmentFragmentoMarinesBinding.inflate(getLayoutInflater());
         return binding.getRoot();    }
 

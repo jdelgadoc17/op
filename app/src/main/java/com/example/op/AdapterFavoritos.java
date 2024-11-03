@@ -35,9 +35,6 @@ public class AdapterFavoritos extends RecyclerView.Adapter<AdapterFavoritos.Favo
         holder.binding.descripcionTextView.setText(personaje.getDescripcion());
         holder.binding.personajeImageView.setImageResource(personaje.getImage());
 
-        // Añadir click listener para el botón de eliminar
-
-
 
     }
 
@@ -57,7 +54,7 @@ public class AdapterFavoritos extends RecyclerView.Adapter<AdapterFavoritos.Favo
     }
 
 
-    //VIEWHOLDER, CADA ITEM
+    //VIEWHOLDER DE CADA ITEM
 
     public static class FavoritoViewHolder extends RecyclerView.ViewHolder {
         ItemPersonajeFavBinding binding;

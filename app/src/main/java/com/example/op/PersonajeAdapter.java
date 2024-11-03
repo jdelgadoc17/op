@@ -38,14 +38,12 @@ public class PersonajeAdapter extends RecyclerView.Adapter<PersonajeAdapter.Info
     public void onBindViewHolder(@NonNull InfoViewHolder holder, int position) {
         Personaje personaje = listaPersonajes.get(position);
 
-        // Bindear datos del personaje
         holder.binding.nombreTextView.setText(personaje.getNombre());
         holder.binding.recompensaTextView.setText(String.valueOf(personaje.getRecompensa()));
         holder.binding.rolTextView.setText(personaje.getRol());
         holder.binding.descripcionTextView.setText(personaje.getDescripcion());
         holder.binding.personajeImageView.setImageResource(personaje.getImage());
 
-        // Actualizar icono de favoritos
         if (personajeViewModel.getListaFavoritos().getValue() != null &&
                 personajeViewModel.getListaFavoritos().getValue().contains(personaje)) {
             holder.binding.favoriteButton.setImageResource(R.drawable.fullstar);

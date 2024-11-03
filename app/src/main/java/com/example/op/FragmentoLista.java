@@ -22,7 +22,6 @@ public class FragmentoLista extends Fragment {
     FragmentFragmentoListaBinding binding;
 
     public FragmentoLista() {
-        // Required empty public constructor
     }
 
 
