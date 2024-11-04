@@ -85,16 +85,11 @@ public class FragmentoDetalle extends Fragment {
 
     public void actualizarDetalle(Personaje personaje) {
         if (personaje != null) {
-            Log.i("not null", "not null");
             binding.nombreTextView.setText(personaje.getNombre());
             binding.recompensaInfo.setText(String.format("Recompensa: %d", personaje.getRecompensa()));
             binding.rolInfo.setText(personaje.getRol());
             binding.descripcionInfo.setText(personaje.getDescripcion());
             binding.imgInfo.setImageResource(personaje.getImage());
-
-        }else{
-            Log.i(" null", " null");
-
 
         }
     }
