@@ -65,6 +65,9 @@ public class FragmentoFavoritos extends Fragment {
                 Personaje personajeEliminado = adapterFavoritos.listaFavoritos.get(position); //Cogemos el personaje según su posición
 
 
+                /*
+                Se crea un AlertDialog para confirmar la eliminacion de un personaje favorito
+                 */
                 new AlertDialog.Builder(getContext())
                         .setTitle(getString(R.string.confirmar_eliminacion))
                         .setMessage(getString(R.string.confirmar_eliminacion2) + personajeEliminado.getNombre() + getString(R.string.de_favs))

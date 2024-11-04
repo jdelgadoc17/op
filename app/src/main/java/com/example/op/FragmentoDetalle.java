@@ -65,7 +65,6 @@ public class FragmentoDetalle extends Fragment {
 
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
             // Oculta el botón en modo horizontal
-            Log.i("aqi", "VERTIAL");
             binding.buttonBackInfo.setVisibility(View.GONE);
         } else {
             // Muestra el botón en modo vertical

@@ -10,6 +10,10 @@ public class PersonajeViewModel extends ViewModel {
     private final MutableLiveData<Personaje> personajeSeleccionado = new MutableLiveData<>();
     private final MutableLiveData<ArrayList<Personaje>> listaFavoritos = new MutableLiveData<>(new ArrayList<>());
 
+
+    /*
+    Uso de la lcase ViewModel para menajear el estado de los personaje mostrados
+     */
     public void seleccionarPersonaje(Personaje personaje) {
         personajeSeleccionado.setValue(personaje);
     }

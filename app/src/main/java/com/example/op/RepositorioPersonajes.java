@@ -8,6 +8,10 @@ public class RepositorioPersonajes {
     public static ArrayList<Personaje> lista_marines = new ArrayList<Personaje>();
     public static ArrayList<Personaje> lista_revolucionarios = new ArrayList<Personaje>();
 
+    /*
+    Esta es la clase general donde se añaden lso diferentes personajes a  cada lista
+     */
+
     public RepositorioPersonajes() {
 
         if(lista_piratas.isEmpty() || lista_marines.isEmpty() || lista_revolucionarios.isEmpty()){

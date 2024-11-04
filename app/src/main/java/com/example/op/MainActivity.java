@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
-        // Observador del personaje seleccionado
+        // Observador del personaje seleccionado para ajustar la visibilidad segun la orientacion
         personajeViewModel.getPersonajeSeleccionado().observe(this, personaje -> {
             if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
                 actualizarVistaDetalle(personaje);
