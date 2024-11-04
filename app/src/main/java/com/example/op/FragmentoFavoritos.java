@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.op.databinding.FragmentFragmentoFavoritosBinding;
 
@@ -82,7 +83,7 @@ public class FragmentoFavoritos extends Fragment {
                         .setNegativeButton(getString(R.string.cancelar), new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                adapterFavoritos.notifyItemChanged(position);
+                                adapterFavoritos.notifyItemChanged(position); //Actualización del adaptador para volver a la vista sin cambios
                             }
                         }).show();
 

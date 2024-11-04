@@ -77,3 +77,4 @@ public class FragmentoRandom extends Fragment {
         binding.nombreTextView.setText(personajeRandom.getNombre());
     }
 }
+

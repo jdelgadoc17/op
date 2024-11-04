@@ -63,13 +63,7 @@ public class FragmentoDetalle extends Fragment {
             }
         });
 
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            // Oculta el botón en modo horizontal
-            binding.buttonBackInfo.setVisibility(View.GONE);
-        } else {
-            // Muestra el botón en modo vertical
-            binding.buttonBackInfo.setVisibility(View.VISIBLE);
-        }
+
 
 
         binding.buttonBackInfo.setOnClickListener(new View.OnClickListener() {
@@ -85,20 +79,26 @@ public class FragmentoDetalle extends Fragment {
 
 
 
+
+
     }
 
     public void actualizarDetalle(Personaje personaje) {
         if (personaje != null) {
+            Log.i("not null", "not null");
             binding.nombreTextView.setText(personaje.getNombre());
             binding.recompensaInfo.setText(String.format("Recompensa: %d", personaje.getRecompensa()));
             binding.rolInfo.setText(personaje.getRol());
             binding.descripcionInfo.setText(personaje.getDescripcion());
             binding.imgInfo.setImageResource(personaje.getImage());
 
-
+        }else{
+            Log.i(" null", " null");
 
 
         }
     }
+
+
 
 }
