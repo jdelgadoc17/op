@@ -4,6 +4,9 @@
     <string name="confirmar_eliminacion2">¿Estás seguro de que deseas eliminar a </string>
     <string name="eliminar">Eliminar</string>
     <string name="cancelar">Cancelar</string>
+    <string name="berries"> berries</string>
+
+
 
     <string name="addFav"> añadido a favoritos</string>
     <string name="delFav"> eliminado de favoritos</string>

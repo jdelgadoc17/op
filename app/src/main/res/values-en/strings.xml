@@ -6,6 +6,8 @@
     <string name="eliminar">Delete</string>
     <string name="cancelar">Cancel</string>
     <string name="de_favs"> from your favorites?</string>
+    <string name="berries"> berries</string>
+
 
     <string name="addFav"> added to favorites </string>
     <string name="delFav"> eliminated from favoritos</string>

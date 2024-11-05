@@ -41,7 +41,10 @@ public class PersonajeAdapter extends RecyclerView.Adapter<PersonajeAdapter.Info
         Personaje personaje = listaPersonajes.get(position);
 
         holder.binding.nombreTextView.setText(personaje.getNombre());
-        holder.binding.recompensaTextView.setText(String.valueOf(personaje.getRecompensa()));
+        holder.binding.recompensaTextView.setText( //Añadir un string al valor del objeto
+                holder.itemView.getContext().getString(R.string.recompensa) + " "+ personaje.getRecompensa()
+        );
+
         holder.binding.rolTextView.setText(personaje.getRol());
         holder.binding.descripcionTextView.setText(personaje.getDescripcion());
         holder.binding.personajeImageView.setImageResource(personaje.getImage());
