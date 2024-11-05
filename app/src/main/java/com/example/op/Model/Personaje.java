@@ -1,4 +1,4 @@
-package com.example.op;
+package com.example.op.Model;
 
 public class Personaje { //ESTA ES NUESTRA CLASE PERSONAJE
     private String nombre;

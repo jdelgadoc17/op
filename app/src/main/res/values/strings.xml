@@ -4,6 +4,10 @@
     <string name="confirmar_eliminacion2">¿Estás seguro de que deseas eliminar a </string>
     <string name="eliminar">Eliminar</string>
     <string name="cancelar">Cancelar</string>
+
+    <string name="addFav"> añadido a favoritos</string>
+    <string name="delFav"> eliminado de favoritos</string>
+
     <string name="de_favs"> de tus favoritos?</string>
 
     <string name="recompensa">Recompensa: </string>
@@ -13,9 +17,7 @@
     <string name="marines">Marines</string>
     <string name="revolucionarios">Revolucionarios</string>
     <string name="no_personajes">No hay personajes disponibles</string>
-    <!-- TODO: Remove or change this placeholder text -->
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="personajes">Personajes</string>
     <string name="favoritos">Favoritos</string>
     <string name="random">Random</string>

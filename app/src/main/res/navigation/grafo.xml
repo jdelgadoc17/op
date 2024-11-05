@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/fragmentoLista"
-        android:name="com.example.op.FragmentoLista"
+        android:name="com.example.op.Fragments.FragmentoLista"
         android:label="FragmentoLista" />
     <fragment
         android:id="@+id/fragmentoFavoritos"
-        android:name="com.example.op.FragmentoFavoritos"
+        android:name="com.example.op.Fragments.FragmentoFavoritos"
         android:label="fragment_fragmento_favoritos"
         tools:layout="@layout/fragment_fragmento_favoritos" />
     <fragment
         android:id="@+id/fragmentoRandom"
-        android:name="com.example.op.FragmentoRandom"
+        android:name="com.example.op.Fragments.FragmentoRandom"
         android:label="FragmentoRandom" />
     <fragment
         android:id="@+id/fragmentoDetalle"
-        android:name="com.example.op.FragmentoDetalle"
+        android:name="com.example.op.Fragments.FragmentoDetalle"
         android:label="FragmentoDetalle" />
 </navigation>

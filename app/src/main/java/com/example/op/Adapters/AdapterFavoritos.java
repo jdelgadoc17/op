@@ -1,4 +1,4 @@
-package com.example.op;
+package com.example.op.Adapters;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -6,13 +6,15 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.op.Model.Personaje;
+import com.example.op.Model.PersonajeViewModel;
 import com.example.op.databinding.ItemPersonajeFavBinding;
 
 import java.util.ArrayList;
 
 public class AdapterFavoritos extends RecyclerView.Adapter<AdapterFavoritos.FavoritoViewHolder> {
 
-    ArrayList<Personaje> listaFavoritos;
+    public ArrayList<Personaje> listaFavoritos;
     private PersonajeViewModel personajeViewModel;
 
     public AdapterFavoritos(ArrayList<Personaje> listaFavoritos, PersonajeViewModel personajeViewModel) {

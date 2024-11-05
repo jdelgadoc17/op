@@ -1,4 +1,6 @@
-package com.example.op;
+package com.example.op.Model;
+
+import com.example.op.R;
 
 import java.util.ArrayList;
 

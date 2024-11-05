@@ -1,18 +1,20 @@
-package com.example.op;
+package com.example.op.Adapters;
 
 
 import android.content.res.Configuration;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.op.Model.Personaje;
+import com.example.op.Model.PersonajeViewModel;
+import com.example.op.R;
 import com.example.op.databinding.ItemPersonajeBinding;
 
 import java.util.List;
@@ -44,6 +46,8 @@ public class PersonajeAdapter extends RecyclerView.Adapter<PersonajeAdapter.Info
         holder.binding.descripcionTextView.setText(personaje.getDescripcion());
         holder.binding.personajeImageView.setImageResource(personaje.getImage());
 
+
+
         if (personajeViewModel.getListaFavoritos().getValue() != null &&
                 personajeViewModel.getListaFavoritos().getValue().contains(personaje)) {
             holder.binding.favoriteButton.setImageResource(R.drawable.fullstar);
@@ -72,13 +76,19 @@ public class PersonajeAdapter extends RecyclerView.Adapter<PersonajeAdapter.Info
 
         holder.binding.favoriteButton.setOnClickListener(view -> {
             personajeViewModel.toggleFavorito(personaje); // Añadir o eliminar de favoritos
+
             if (personajeViewModel.getListaFavoritos().getValue().contains(personaje)) {
+                Toast.makeText(view.getContext(), personaje.getNombre() +  view.getContext().getString(R.string.addFav), Toast.LENGTH_SHORT).show();
                 holder.binding.favoriteButton.setImageResource(R.drawable.fullstar);
             } else {
+                Toast.makeText(view.getContext(), personaje.getNombre() + view.getContext().getString(R.string.delFav), Toast.LENGTH_SHORT).show();
                 holder.binding.favoriteButton.setImageResource(R.drawable.emptystar);
             }
         });
+
     }
+
+
 
     @Override
     public int getItemCount() {

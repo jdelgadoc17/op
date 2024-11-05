@@ -1,6 +1,5 @@
-package com.example.op;
+package com.example.op.Fragments;
 
-import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,11 +9,12 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.op.Model.Personaje;
+import com.example.op.Model.PersonajeViewModel;
 import com.example.op.databinding.FragmentFragmentoDetalleBinding;
 
 

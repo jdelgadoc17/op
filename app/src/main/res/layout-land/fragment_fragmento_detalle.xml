@@ -34,22 +34,22 @@
         android:id="@+id/imgInfo"
         android:layout_width="264dp"
         android:layout_height="242dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="220dp"
         android:src="@drawable/luffy_hat"
-        app:layout_constraintEnd_toStartOf="@+id/rolInfo"
-        app:layout_constraintHorizontal_bias="0.368"
-        app:layout_constraintStart_toEndOf="@+id/nombreTextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/descripcionInfo"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.094"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/nombreTextView"
         android:layout_width="220dp"
         android:layout_height="53dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintHorizontal_bias="0.031"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -60,7 +60,7 @@
         android:layout_marginTop="16dp"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.082"
         app:layout_constraintStart_toEndOf="@+id/nombreTextView"
         app:layout_constraintTop_toTopOf="parent" />
 

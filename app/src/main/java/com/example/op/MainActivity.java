@@ -3,34 +3,9 @@ package com.example.op;
 import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
-import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.NavController;
-import androidx.navigation.fragment.NavHostFragment;
-import androidx.navigation.ui.NavigationUI;
-
-import com.example.op.databinding.ActivityMainBinding;
-import com.google.android.material.navigation.NavigationBarView;
-
-
-import android.content.res.Configuration;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -40,6 +15,9 @@ import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
 
+import com.example.op.Fragments.FragmentoDetalle;
+import com.example.op.Model.Personaje;
+import com.example.op.Model.PersonajeViewModel;
 import com.example.op.databinding.ActivityMainBinding;
 import com.google.android.material.navigation.NavigationBarView;
 

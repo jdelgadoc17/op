@@ -1,4 +1,4 @@
-package com.example.op;
+package com.example.op.Fragments;
 
 import android.os.Bundle;
 
@@ -13,6 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.op.Model.Personaje;
+import com.example.op.Model.RepositorioPersonajes;
+import com.example.op.R;
 import com.example.op.databinding.FragmentFragmentoRandomBinding;
 
 import java.util.ArrayList;
