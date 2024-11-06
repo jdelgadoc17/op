@@ -9,12 +9,12 @@
         android:id="@+id/descripcionInfo"
         android:layout_width="184dp"
         android:layout_height="191dp"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="4dp"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nombreTextView"
-        app:layout_constraintVertical_bias="0.102" />
+        app:layout_constraintVertical_bias="0.072" />
 
     <TextView
         android:id="@+id/recompensaInfo"
@@ -32,14 +32,14 @@
 
     <ImageView
         android:id="@+id/imgInfo"
-        android:layout_width="264dp"
-        android:layout_height="242dp"
-        android:layout_marginStart="220dp"
+        android:layout_width="185dp"
+        android:layout_height="171dp"
+        android:layout_marginStart="24dp"
         android:src="@drawable/luffy_hat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/descripcionInfo"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094"
+        app:layout_constraintVertical_bias="0.462"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
