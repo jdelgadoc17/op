@@ -81,10 +81,10 @@ public class PersonajeAdapter extends RecyclerView.Adapter<PersonajeAdapter.Info
             personajeViewModel.toggleFavorito(personaje); // Añadir o eliminar de favoritos
 
             if (personajeViewModel.getListaFavoritos().getValue().contains(personaje)) {
-                Toast.makeText(view.getContext(), personaje.getNombre() +  view.getContext().getString(R.string.addFav), Toast.LENGTH_SHORT).show();
+                Toast.makeText(view.getContext(), personaje.getNombre() +  " "+  view.getContext().getString(R.string.addFav), Toast.LENGTH_SHORT).show();
                 holder.binding.favoriteButton.setImageResource(R.drawable.fullstar);
             } else {
-                Toast.makeText(view.getContext(), personaje.getNombre() + view.getContext().getString(R.string.delFav), Toast.LENGTH_SHORT).show();
+                Toast.makeText(view.getContext(), personaje.getNombre() +  " "+ view.getContext().getString(R.string.delFav), Toast.LENGTH_SHORT).show();
                 holder.binding.favoriteButton.setImageResource(R.drawable.emptystar);
             }
         });
